@@ -1,0 +1,45 @@
+page-home {
+
+    ion-card
+    { 
+        width:100% !important; 
+        margin-left: 0 !important; 
+        margin-right: 0 !important; 
+        img
+        { 
+            width:100%; 
+        } 
+    
+    }
+    .blue-background{
+        background-color: blue;
+
+    }
+    .department-card{
+        height: 200px;
+    }
+    .poduct-card{
+        text-align: center;
+        
+    }
+    .product-name {
+        font-size: 7pt !important;
+        display: inline-block;
+        text-transform: capitalize;
+    }
+    .product-price{
+        font-size: 10pt !important;
+        color: red;
+        font-weight: bold;
+    
+    }
+    ion-icon {
+        font-size: 15pt; //Preferred size here
+        color: #fff;
+    }
+
+}
+.full-width{
+    width: 100vw;
+}
+

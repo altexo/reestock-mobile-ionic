@@ -1,0 +1,130 @@
+<ion-header>
+  <!-- <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-buttons padding end>
+        <ion-icon name="search"></ion-icon>
+    </ion-buttons>
+    <ion-buttons padding end (click)="openCart()">
+        <button >
+        <ion-icon name="cart">
+      
+        </ion-icon>
+    </button>
+    </ion-buttons>
+    <ion-title>Inicio</ion-title>
+  </ion-navbar> -->
+  <nav [navTitle]="pageTitle"></nav>
+  
+</ion-header>
+
+<!-- dimensions set using attributes -->
+<ion-content>
+   
+    <ion-img  width="100%" height="240" src="http://reestock.com.mx/img/Banner_Tienda_Carne_Artesanal_(340x420).jpg"></ion-img>
+    <div padding>
+        <ion-segment [(ngModel)]="destacado">
+          <ion-segment-button value="abarrotes">
+            Destacado en abarrotes
+          </ion-segment-button>
+          <ion-segment-button value="frutaYVerdura">
+            Frutas y Verduras
+          </ion-segment-button>
+        </ion-segment>
+      </div>
+      
+      <div [ngSwitch]="destacado">
+        <ion-list *ngSwitchCase="'frutaYVerdura'">
+            <ion-grid>
+                <ion-row>
+                  <ion-col col-6>
+                      <ion-card >
+                          <ion-card-content  class="poduct-card">
+                              <img src="http://reestock.com.mx/images/products/00000000004038s.jpg">
+                              <label for="" class="product-name">DURAZNO IMPORTADO POR KG</label><br>
+                              <label for="" class="product-price" >$73.83 MXN</label> 
+                          </ion-card-content>
+                      </ion-card> 
+                      
+                  </ion-col>
+                  <ion-col col-6>
+                      <ion-card >
+                          <ion-card-content class="poduct-card">
+                              <img src="http://reestock.com.mx/images/products/00000000004391s.jpg">
+                              <label for="" class="product-name">NARANJA VALENCIA POR KILO</label> <br>
+                              <label for="" class="product-price">$38.41 MXN</label>
+                          </ion-card-content>
+                      </ion-card> 
+                  </ion-col>
+                  <ion-col col-6>
+                      <ion-card >
+                          <ion-card-content  class="poduct-card">
+                              <img src="http://reestock.com.mx/images/products/00000000004011s.jpg">
+                              <label for="" class="product-name">PLÁTANO CHIAPAS POR KILO</label><br>
+                              <label for="" class="product-price" >$20.22 MXN</label> 
+                          </ion-card-content>
+                      </ion-card> 
+                      
+                  </ion-col>
+                  <ion-col col-6>
+                      <ion-card >
+                          <ion-card-content class="poduct-card">
+                              <img src="http://reestock.com.mx/images/products/00000000004050s.jpg">
+                              <label for="" class="product-name">MELÓN CHINO POR KILO</label> <br>
+                              <label for="" class="product-price">$26.64 MXN</label>
+                          </ion-card-content>
+                      </ion-card> 
+                  </ion-col>
+                </ion-row> 
+              </ion-grid> 
+        </ion-list>
+      
+        <ion-list *ngSwitchCase="'abarrotes'">
+            <ion-grid>
+                <ion-row>
+                  <ion-col col-6>
+                      <ion-card (click)="openProductModal()">
+                          <ion-card-content  class="poduct-card">
+                              <img src="http://reestock.com.mx/images/products/00750221983244s.jpg">
+                              <label for="" class="product-name">ACEITE DE OLIVA CARAPELLI EXTRA VIRGEN 750 ML</label><br>
+                              <label for="" class="product-price" >$121.98 MXN</label> 
+                          </ion-card-content>
+                      </ion-card> 
+                      
+                  </ion-col>
+                  <ion-col col-6>
+                      <ion-card >
+                          <ion-card-content class="poduct-card">
+                              <img src="http://reestock.com.mx/images/products/00001952110001s.jpg">
+                              <label for="" class="product-name">ACEITE DE OLIVA CARAPELLI EXTRA VIRGEN 750 ML</label> <br>
+                              <label for="" class="product-price">$132.68 MXN</label>
+                          </ion-card-content>
+                      </ion-card> 
+                  </ion-col>
+                  <ion-col col-6>
+                      <ion-card >
+                          <ion-card-content  class="poduct-card">
+                              <img src="http://reestock.com.mx/images/products/00002550000376s.jpg">
+                              <label for="" class="product-name">CAFÉ MOLIDO FOLGERS BLACK SILK 292G</label><br>
+                              <label for="" class="product-price" >$141.24 MXN</label> 
+                          </ion-card-content>
+                      </ion-card> 
+                      
+                  </ion-col>
+                  <ion-col col-6>
+                      <ion-card >
+                          <ion-card-content class="poduct-card">
+                              <img src="http://reestock.com.mx/images/products/00750100801813s.jpg">
+                              <label for="" class="product-name">CEREAL KELLOGG'S CHOCO KRISPIS 690 G</label> <br>
+                              <label for="" class="product-price">$66.34 MXN</label>
+                          </ion-card-content>
+                      </ion-card> 
+                  </ion-col>
+                </ion-row> 
+              </ion-grid>   
+        </ion-list>
+      </div>
+
+  <!-- <button ion-button secondary menuToggle>Toggle Menu</button> -->
+</ion-content>

@@ -1,0 +1,76 @@
+page-product-modal {
+    .close-button{
+        background-color: transparent;
+    }
+    .close-icon{
+        color: #fff;
+        font-size: 18pt;
+    }
+    .img-container{
+        margin-top: 15px;
+        background-color: white;
+    }
+    .product-name{
+        margin-bottom: 20px;
+        align-self: center;
+        font-weight: bold;
+        font-size: 10pt;
+        color: #ff5722;
+       // color: red
+    }
+    .main-view-container {
+        
+       // background-color: grey;
+    }
+    .product-price{
+        font-size: 12pt !important;
+        //color: red;
+        font-weight: bold;
+    
+    }
+    .btn-color{
+        background-color: #F44336;
+        color: white;
+    }
+    .btn-related{
+        background-color: #F44336;
+        color: white;
+        font-size: 8pt;
+    }
+    .unity{
+        color: gray;
+        font-size: 8pt;
+    }
+    .brand{
+        color: gray;
+        font-size: 8pt;
+    }
+    .scroll-zoom-wrapper {
+        white-space: nowrap;
+    }
+
+    .ion-card-scroll {
+       width: 50% !important;
+
+        display: inline-block;
+    }
+    .name-related{
+        font-size: 7pt;
+        white-space: pre-line!important;
+        display: inline-block;
+    }
+    .price-related{
+        font-size: 9pt;
+        color: #ff5722;
+        font-weight: bold;
+    }
+
+    ion-scroll {
+        min-height: 210px; 
+        height: auto;
+
+            .scroll-content {
+            padding: 0px !important;
+        }    
+    }
+}

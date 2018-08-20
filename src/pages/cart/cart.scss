@@ -1,0 +1,28 @@
+page-cart {
+    .close-button{
+        background-color: transparent;
+    }
+    .close-icon{
+        color: #fff;
+        font-size: 18pt;
+    }
+    .label-md{
+        margin: 0 !important;
+    }
+    .label-ios{
+        margin: 0 !important;
+    }
+    .product-details{
+        padding: 0 !important;
+    }
+    .product-brand{
+        font-size: 8pt;
+        color: grey;
+    }
+    .cart-item{
+        //background-color: green;
+    }
+    .continue-button{
+        color: red;
+    }
+}

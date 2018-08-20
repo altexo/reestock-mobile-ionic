@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>List</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-list no-lines>
+      <ion-item-group>
+          <ion-item-divider color="light">Confirmadas:</ion-item-divider>
+          <ion-item>
+            <ion-icon class="active-list-icon"  name="md-list-box" item-start></ion-icon>
+              <button ion-item (click)="showList()">
+                Entrega: 10 de agosto del 2018 
+                <p>(10 articulos) Toca para ver detalles</p>
+              </button> 
+              
+          </ion-item>
+          <ion-item>
+              <ion-icon class="active-list-icon"  name="md-list-box" item-start></ion-icon>
+                <button ion-item (click)="showList()">
+                  Entrega: 12 de agosto del 2018
+                  <p>(5 articulos) Toca para ver detalles</p>
+                </button> 
+            </ion-item>
+          <ion-item-divider color="light">En espera:</ion-item-divider>
+             <ion-item>
+          <ion-icon class="await-list-icon" name="md-list-box" item-start></ion-icon>
+            <button ion-item (click)="showList()">
+              Entrega: 20 de agosto del 2018 
+              <p>(43 articulos) Toca para ver detalles</p>
+            </button> 
+        </ion-item>
+      </ion-item-group>
+     
+     
+    </ion-list>
+</ion-content>

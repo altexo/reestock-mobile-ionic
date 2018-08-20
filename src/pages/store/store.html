@@ -1,0 +1,161 @@
+<!--
+  Generated template for the StorePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+<ion-navbar>
+  <button ion-button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+  </button>
+  <ion-buttons padding end>
+    <ion-icon name="search"></ion-icon>
+  </ion-buttons>
+  <ion-buttons padding end>
+    <ion-icon name="cart"></ion-icon>
+  </ion-buttons>
+    <ion-title>Tienda</ion-title>
+</ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+  <div class="banner">
+      <div class="img-banner">
+        <img  src="http://reestock.com.mx/img/Banner_Principal_Mesa_con_cosas_(432x1440).jpg" />
+      </div>
+      <div class="button-banner">
+          <button ion-button full outline (click)="hide()">Mostrar destacados</button>
+      </div>  
+  
+  </div>
+    
+  <!-- <ion-item>
+    <ion-label>Pepperoni</ion-label>
+    <ion-checkbox (click)="hide()" [(ngModel)]="pepperoni"></ion-checkbox>
+  </ion-item> -->
+  <div class="containers" (click)="goToProductsPage()">
+    <div class="img-container">
+      <img src='assets/icon/groceries.png'class="icon-img"/>
+      <h4 class="h4" >Abarrotes</h4>
+      <!-- <ion-img width="100%" height="100%" src="https://harvestmeat.com/espanol/wp-content/uploads/revslider/products-grocery/grocery-product-1a.jpg"></ion-img> -->
+    </div>
+  </div>
+  <div class="containers"  *ngIf="hideMe">
+      <ion-grid>
+          <ion-row class="category-row">
+            <ion-col >
+              <img class="category-img" src="http://reestock.com.mx/images/categories/CAFE_Y_TE.jpg"/>
+              <ion-label>Café y Té <ion-icon name="arrow-forward"></ion-icon></ion-label>
+            </ion-col>
+            <ion-col>
+                <img class="category-img" src="http://reestock.com.mx/images/categories/categoria_9.jpg"/>
+                <ion-label>Pan Tortillas y derivados <ion-icon name="arrow-forward"></ion-icon></ion-label>
+            </ion-col>
+            <ion-col>
+                <img class="category-img" src="http://reestock.com.mx/images/categories/Special-K-300x300.jpg"/>
+                <ion-label>Cereales <ion-icon name="arrow-forward"></ion-icon></ion-label>
+            </ion-col>
+            <ion-col class="all-categories">
+                <ion-icon name="arrow-forward"></ion-icon>
+                <ion-label>Ver Todo </ion-label>
+            </ion-col>
+          </ion-row>
+        </ion-grid>  
+  </div>
+    <!-- <div >
+      <ion-label class="destacados-label">Destacados en Abarrotes: </ion-label>
+        <ion-grid>
+          <ion-row class="category-row">
+            <ion-col >
+              <img class="category-img" src="http://reestock.com.mx/images/categories/CAFE_Y_TE.jpg"/>
+              <ion-label>Café y Té <ion-icon name="arrow-forward"></ion-icon></ion-label>
+            </ion-col>
+            <ion-col>
+                <img class="category-img" src="http://reestock.com.mx/images/categories/categoria_9.jpg"/>
+                <ion-label>Pan Tortillas y derivados <ion-icon name="arrow-forward"></ion-icon></ion-label>
+            </ion-col>
+            <ion-col>
+                <img class="category-img" src="http://reestock.com.mx/images/categories/Special-K-300x300.jpg"/>
+                <ion-label>Cereales <ion-icon name="arrow-forward"></ion-icon></ion-label>
+            </ion-col>
+            <ion-col class="all-categories">
+                <ion-icon name="arrow-forward"></ion-icon>
+                <ion-label>Ver Todo </ion-label>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+    </div> -->
+ 
+  <div class="containers">
+    <div class="img-container-meat">
+      <img src='assets/icon/steak.png'class="icon-img"/>
+      <h4 class="h4" >Carnes y Pescados</h4>
+      <!-- <ion-img width="100%" height="100%" src="https://harvestmeat.com/espanol/wp-content/uploads/revslider/products-grocery/grocery-product-1a.jpg"></ion-img> -->
+    </div>
+  </div>
+  <div class="containers"  *ngIf="hideMe">
+
+  </div>
+    <!-- <div>
+        <ion-label class="destacados-label">Destacados en Carnicos: </ion-label>
+        <ion-grid>
+          <ion-row class="category-row">
+            <ion-col >
+              <img class="category-img" src="http://reestock.com.mx/images/categories/carne-asada-al-carbon-400x400.jpg"/>
+              <ion-label>Res <ion-icon name="arrow-forward"></ion-icon></ion-label>
+            </ion-col>
+            <ion-col>
+                <img class="category-img" src="http://reestock.com.mx/images/categories/PESCADO-FRESCO_copia.jpg"/>
+                <ion-label>Pescados <ion-icon name="arrow-forward"></ion-icon></ion-label>
+            </ion-col>
+            <ion-col>
+                <img class="category-img" src="http://reestock.com.mx/images/categories/Chicken-Quarter-Cut-2.fw_.png"/>
+                <ion-label>Aves <ion-icon name="arrow-forward"></ion-icon></ion-label>
+            </ion-col>
+            <ion-col class="all-categories">
+                <ion-icon name="arrow-forward"></ion-icon>
+                <ion-label>Ver Todo </ion-label>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+    </div> -->
+  
+  <div class="containers">
+    <div class="img-container-fruit">
+      <img src='assets/icon/apple.png'class="icon-img"/>
+      <h4 class="h4">Frutas Y Verduras</h4>
+      <!-- <ion-img width="100%" height="100%" src="https://harvestmeat.com/espanol/wp-content/uploads/revslider/products-grocery/grocery-product-1a.jpg"></ion-img> -->
+    </div>
+  </div>
+  <div class="containers"  *ngIf="hideMe">
+
+  </div>
+    <!-- <div>
+        <ion-label class="destacados-label">Destacados en Frutas y Verduras: </ion-label>
+        <ion-grid>
+          <ion-row class="category-row">
+            <ion-col >
+              <img class="category-img" src="http://reestock.com.mx/images/categories/import-export-lime.png"/>
+              <ion-label>Fruta<ion-icon name="arrow-forward"></ion-icon></ion-label>
+            </ion-col>
+            <ion-col>
+                <img class="category-img" src="http://reestock.com.mx/images/categories/Jitomates-bola-300x300.jpg"/>
+                <ion-label>Verdura <ion-icon name="arrow-forward"></ion-icon></ion-label>
+            </ion-col>
+            <ion-col>
+                <img class="category-img" src="http://reestock.com.mx/images/categories/primavera-300x300.png"/>
+                <ion-label>Ensalada <ion-icon name="arrow-forward"></ion-icon></ion-label>
+            </ion-col>
+            <ion-col class="all-categories">
+                <ion-icon name="arrow-forward"></ion-icon>
+                <ion-label>Ver Todo </ion-label>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+    </div> -->
+
+</ion-content>

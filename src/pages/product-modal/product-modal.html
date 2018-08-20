@@ -1,0 +1,119 @@
+<!--
+  Generated template for the ProductModalPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title></ion-title>
+    <ion-buttons end>
+      <button class="close-button" padding (click)="closeProductModal()">
+        <ion-icon class="close-icon" name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content text-center padding-top class="main-view-container">
+    <label padding paddign-top for="" class="product-name">ACEITE DE OLIVA CARAPELLI EXTRA VIRGEN 750 ML</label><br>
+    <label class="brand">AIRES DEL CAMPO</label>
+
+  <ion-grid text-center class="img-container">
+      <ion-row>
+    <ion-col col-12>
+        <img width='50%' height='100%' src="http://reestock.com.mx/images/products/00750221983244s.jpg">
+    </ion-col>
+    <ion-col col-12>
+        <ion-card>
+            <ion-card-header>
+                <label for="" class="product-price" >$121.98 MXN</label> <label class="unity">PIEZA</label>
+            </ion-card-header>
+            <ion-card-content>
+                <ion-item>
+                    <ion-label>Reestock Cada: </ion-label>
+                    <ion-select [(ngModel)]="reestock">
+                      <ion-option value="1">Única vez</ion-option>
+                      <ion-option value="2">Semanal </ion-option>
+                      <ion-option value="3">Quincenal </ion-option>
+                      <ion-option value="4">Mensual </ion-option>
+                      <ion-option value="5">Cada 6 semanas </ion-option>
+                      <ion-option value="6">Cada 2 meses </ion-option>
+                      <ion-option value="7">Cada 6 meses </ion-option>
+                    </ion-select>
+                  </ion-item>
+                <button class="btn-color" ion-button block>Añadir al carrito</button>
+            </ion-card-content>
+          </ion-card>
+    </ion-col>
+    <ion-col col-12>
+      <h6>Relacionados: </h6>
+        <ion-scroll scrollX="true" direction="x">
+         
+            <ion-card class="ion-card-scroll">
+                <!--<ion-card *ngFor="let item of listCardsAdventure">-->
+              <ion-card-content >          
+                <ion-img class="item" width='40%' height='40%' src="http://reestock.com.mx/images/products/00750149100093s.jpg"></ion-img>
+                <br>
+                    <!-- <button ion-item (click)="openDetailActivity(item)">             -->
+                <label class="name-related">
+                    ACEITE DE CÁRTAMO OLÉICO 946 ML
+                </label>
+                <label class="item price-related">
+                  $  55.64 MXN
+                </label>
+                <button class="btn-related" ion-button block >            
+                  Añadir al carrito
+                      <!-- <ion-icon name="arrow-forward" item-right color="primary"></ion-icon> -->
+                </button>
+              </ion-card-content>
+            </ion-card>
+            
+                
+            <ion-card class="ion-card-scroll">
+                <!--<ion-card *ngFor="let item of listCardsAdventure">-->
+              <ion-card-content >          
+                <ion-img class="item" width='40%' height='40%' src="http://reestock.com.mx/images/products/00750302025706s.jpg"></ion-img>
+                <br>
+                    <!-- <button ion-item (click)="openDetailActivity(item)">             -->
+                <label class="name-related">
+                  ACEITE DE COCO DE MI PUEBLO ORGÁNICO EXTRA VIRGEN 473 ML
+                </label>
+                <label class="item price-related">
+                  $  102.72 MXN
+                </label>
+                <button class="btn-related" ion-button block >            
+                  Añadir al carrito
+                      <!-- <ion-icon name="arrow-forward" item-right color="primary"></ion-icon> -->
+                </button>
+              </ion-card-content>
+            </ion-card>
+                <ion-card class="ion-card-scroll">
+                    <!--<ion-card *ngFor="let item of listCardsAdventure">-->
+                  <ion-card-content >          
+                    <ion-img class="item" width='40%' height='40%' src="http://reestock.com.mx/images/products/00002670015987s.jpg"></ion-img>
+                    <br>
+                        <!-- <button ion-item (click)="openDetailActivity(item)">             -->
+                    <label class="name-related">
+                        ACEITE DE COCO LOU ANA 100 % PURO 414 ML
+                    </label>
+                    <label class="item price-related">
+                      $  95.23 MXN
+                    </label>
+                    <button class="btn-related" ion-button block >            
+                      Añadir al carrito
+                          <!-- <ion-icon name="arrow-forward" item-right color="primary"></ion-icon> -->
+                    </button>
+                  </ion-card-content>
+                </ion-card>
+          </ion-scroll>
+
+    </ion-col>
+   </ion-row>
+  </ion-grid>
+
+ 
+</ion-content>

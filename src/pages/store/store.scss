@@ -1,0 +1,78 @@
+page-store {
+    
+    .containers {
+       // background-color: blue;
+        height: 15%;
+        margin-bottom: 1%;
+
+    }
+    .img-container{
+        text-align: center;
+       
+        height: 100%;
+        background: linear-gradient(rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.5)), url('https://harvestmeat.com/espanol/wp-content/uploads/revslider/products-grocery/grocery-product-1a.jpg');
+        background-repeat: no-repeat; background-size: 100% 100%;
+    }
+    .img-container-meat{
+        text-align: center;
+        height: 100%;
+        background: linear-gradient(rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.5)), url('../assets/imgs/meat-category.jpg');
+        background-repeat: no-repeat; background-size: 100% 100%;
+    }
+    .img-container-fruit{
+        text-align: center;
+        height: 100%;
+        background: linear-gradient(rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.5)), url('../assets/imgs/fruit.jpg');
+        background-repeat: no-repeat; background-size: 100% 100%;
+    }
+    .h4{
+        margin: 0;
+       justify-content: center;
+        color: white;
+    }
+    .icon-img{
+        margin-top: 5%;
+        font-size: 8pt;
+    }
+    .category-img{
+        width: 60%;
+    }
+    .category-row{
+        text-align: center;
+    }
+    .category-row ion-label{
+        margin: 0;
+        white-space: pre-line !important;
+        font-size: 7pt;
+    }
+    .all-categories{
+        align-self: center;
+    }
+    .all-categories ion-label{
+        font-size: 8pt
+    }
+    .all-categories ion-icon{
+        font-size: 21pt;
+        color: rgb(187, 5, 5);
+    }
+    .destacados-label{
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 5px;
+
+        color: red;
+        font-size: 7pt;
+    }
+    .banner{
+        height: 28%;
+    }
+    .img-banner{
+       // height: 100%;
+        width: 100%;
+    }
+    .button-banner button{
+        //bottom: 30%;
+        vertical-align: bottom;
+    }
+
+}
