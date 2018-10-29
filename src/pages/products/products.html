@@ -16,41 +16,12 @@
 <ion-content >
     <ion-grid>
         <ion-row>
-          <ion-col col-6>
-              <ion-card>
-                  <ion-card-content  class="poduct-card">
-                      <img src="http://reestock.com.mx/images/products/00750221983244s.jpg">
-                      <label for="" class="product-name">ACEITE DE OLIVA CARAPELLI EXTRA VIRGEN 750 ML</label><br>
-                      <label for="" class="product-price" >$121.98 MXN</label> 
-                  </ion-card-content>
-              </ion-card> 
-              
-          </ion-col>
-          <ion-col col-6>
-              <ion-card >
-                  <ion-card-content class="poduct-card">
-                      <img src="http://reestock.com.mx/images/products/00001952110001s.jpg">
-                      <label for="" class="product-name">ACEITE DE OLIVA CARAPELLI EXTRA VIRGEN 750 ML</label> <br>
-                      <label for="" class="product-price">$132.68 MXN</label>
-                  </ion-card-content>
-              </ion-card> 
-          </ion-col>
-          <ion-col col-6>
-              <ion-card >
-                  <ion-card-content  class="poduct-card">
-                      <img src="http://reestock.com.mx/images/products/00002550000376s.jpg">
-                      <label for="" class="product-name">CAFÉ MOLIDO FOLGERS BLACK SILK 292G</label><br>
-                      <label for="" class="product-price" >$141.24 MXN</label> 
-                  </ion-card-content>
-              </ion-card> 
-              
-          </ion-col>
-          <ion-col col-6>
-              <ion-card >
-                  <ion-card-content class="poduct-card">
-                      <img src="http://reestock.com.mx/images/products/00750100801813s.jpg">
-                      <label for="" class="product-name">CEREAL KELLOGG'S CHOCO KRISPIS 690 G</label> <br>
-                      <label for="" class="product-price">$66.34 MXN</label>
+          <ion-col col-6 *ngFor="let product of products" text-wrap>
+              <ion-card text-wrap (click)="openProductModal(product.id)" >
+                  <ion-card-content  class="poduct-card " >
+                      <img [src]="'http://reestock.com.mx/'+product.product_img" >
+                      <label for="" class="product-name " text-wrap>{{product.product_name}}</label><br>
+                      <label for="" class="product-price " >${{product.sale_price}} MXN</label> 
                   </ion-card-content>
               </ion-card> 
           </ion-col>

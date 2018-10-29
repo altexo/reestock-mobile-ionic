@@ -18,7 +18,7 @@ export class NavComponent {
 
   constructor(public navCtrl: NavController, private modalCtrl: ModalController) {
     console.log('Hello NavComponent Component');
-    this.text = 'Hello World';
+    this.text = 'Inicio';
   }
   
   ngAfterViewinit(){

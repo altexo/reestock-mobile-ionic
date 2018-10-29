@@ -19,23 +19,23 @@
 
 
 <ion-content text-center padding-top class="main-view-container">
-    <label padding paddign-top for="" class="product-name">ACEITE DE OLIVA CARAPELLI EXTRA VIRGEN 750 ML</label><br>
-    <label class="brand">AIRES DEL CAMPO</label>
+    <label padding paddign-top for="" class="product-name">{{product?.product_name}}</label><br>
+    <label class="brand">{{product?.brand}}</label>
 
   <ion-grid text-center class="img-container">
       <ion-row>
     <ion-col col-12>
-        <img width='50%' height='100%' src="http://reestock.com.mx/images/products/00750221983244s.jpg">
+        <img width='50%' height='100%' [src]="'http://reestock.com.mx/'+product?.product_img">
     </ion-col>
     <ion-col col-12>
         <ion-card>
             <ion-card-header>
-                <label for="" class="product-price" >$121.98 MXN</label> <label class="unity">PIEZA</label>
+                <label for="" class="product-price" >${{product?.sale_price}} MXN</label> <label class="unity">{{product?.unity}}</label>
             </ion-card-header>
             <ion-card-content>
                 <ion-item>
                     <ion-label>Reestock Cada: </ion-label>
-                    <ion-select [(ngModel)]="reestock">
+                    <ion-select [(ngModel)]="reestock" (ionChange)="reestockFrequency();">
                       <ion-option value="1">Única vez</ion-option>
                       <ion-option value="2">Semanal </ion-option>
                       <ion-option value="3">Quincenal </ion-option>
@@ -45,7 +45,19 @@
                       <ion-option value="7">Cada 6 meses </ion-option>
                     </ion-select>
                   </ion-item>
-                <button class="btn-color" ion-button block>Añadir al carrito</button>
+                  <ion-item>
+                  </ion-item>
+                <button class="btn-color" ion-button block *ngIf="!inCart"  [disabled]="!addToCartButton" (click)="addToCart()">Añadir al carrito</button>
+                <div ion-row *ngIf="inCart" row class="allreadyInCart" style="justify-content: space-between">
+                  
+                      <button start color="light"  style="width: 30%" ion-button block  ><ion-icon  name="remove" class="qty-icon"  (click)="quantityHandler('minus',cartDetails.cart_id)"></ion-icon></button>
+                   
+                      <span class="qty-label" *ngIf="!showLoading">{{cartDetails.quantity}}</span> 
+                      <ion-spinner name="circles" *ngIf="showLoading" style="margin-top: 2%"></ion-spinner>
+                      <button end color="light"  style="width: 30%; color:black" ion-button block  ><ion-icon  name="add" class="qty-icon"  (click)="quantityHandler('plus',cartDetails.cart_id)"></ion-icon></button>
+                   
+                </div>
+                
             </ion-card-content>
           </ion-card>
     </ion-col>
@@ -54,11 +66,12 @@
         <ion-scroll scrollX="true" direction="x">
          
             <ion-card class="ion-card-scroll">
-                <!--<ion-card *ngFor="let item of listCardsAdventure">-->
-              <ion-card-content >          
-                <ion-img class="item" width='40%' height='40%' src="http://reestock.com.mx/images/products/00750149100093s.jpg"></ion-img>
+              
+              <ion-card-content>    
+
+                <!-- <img class="item" width='40%' height='40%' src="http://reestock.com.mx/images/products/00750149100093s.jpg">
                 <br>
-                    <!-- <button ion-item (click)="openDetailActivity(item)">             -->
+                 
                 <label class="name-related">
                     ACEITE DE CÁRTAMO OLÉICO 946 ML
                 </label>
@@ -67,8 +80,32 @@
                 </label>
                 <button class="btn-related" ion-button block >            
                   Añadir al carrito
-                      <!-- <ion-icon name="arrow-forward" item-right color="primary"></ion-icon> -->
-                </button>
+                    
+                </button> -->
+                <ion-grid>
+                    <ion-row>
+                      <ion-col col-12><img  src="http://reestock.com.mx/images/products/00750149100093s.jpg"></ion-col>
+                      <ion-col col-12 >
+                        <label class="name-related">
+                          ACEITE DE CÁRTAMO OLÉICO 946 ML
+                        </label>
+                      </ion-col>
+                      <ion-col>
+                          <label class="item price-related">
+                              $  55.64 MXN
+                            </label>
+                      </ion-col>
+                      <ion-col>
+                          <button class="btn-related" ion-button block >            
+                              Añadir al carrito
+                                
+                            </button>
+                      </ion-col>
+                    </ion-row>
+                    <!-- <ion-row>
+                      <ion-col col-6>This column will take 6 columns</ion-col>
+                    </ion-row> -->
+                  </ion-grid>
               </ion-card-content>
             </ion-card>
             
@@ -94,7 +131,7 @@
                 <ion-card class="ion-card-scroll">
                     <!--<ion-card *ngFor="let item of listCardsAdventure">-->
                   <ion-card-content >          
-                    <ion-img class="item" width='40%' height='40%' src="http://reestock.com.mx/images/products/00002670015987s.jpg"></ion-img>
+                    <img class="item" width='40%' height='40%' src="http://reestock.com.mx/images/products/00002670015987s.jpg"/>
                     <br>
                         <!-- <button ion-item (click)="openDetailActivity(item)">             -->
                     <label class="name-related">

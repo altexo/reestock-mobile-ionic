@@ -20,29 +20,36 @@
 
 <ion-content >
   <div class="cart-item">
-    <ion-grid>
-      <ion-row>
+    <ion-grid *ngFor="let p of products; let i = index" class="background-grid">
+      <ion-row class="background-row">
         <ion-col>
-          <img src="http://reestock.com.mx/images/products/00000000004038s.jpg">
+          <!-- <img [src]="'http://reestock.com.mx/'+p.products.product_img"> -->
+          <img [src]=" ('http://reestock.com.mx/'+p.products.product_img) || (loadingGif) "> 
         </ion-col>
         <ion-col col-8>
           <ion-row>
             <ion-col col-12 class="product-details">
-              <ion-label>NARANJA VALENCIA LLEVELE</ion-label>
+              <ion-label><b>{{p.products.product_name}}</b></ion-label>
             </ion-col>
             <ion-col col-12 class="product-details">
-              <ion-label class="product-brand">FRUTILOCAS KILO</ion-label>
+              <ion-label class="product-brand">{{p.products.brand}} {{p.products.unity}}</ion-label>
             </ion-col>
-            <ion-col col-12>
-                <button ion-button small color="danger"><ion-icon name="remove"></ion-icon></button>
-                <label padding>3</label>
-                <button ion-button small color="danger"><ion-icon name="add"></ion-icon></button>
-                <button ion-button small color="danger"><ion-icon name="paper"></ion-icon></button>
+            <ion-col col-12 style="display: inline-flex;   align-items: center;
+            ">
+                <!-- <ion-icon name="add" class='icon ion-plus-round icon-plus-round' mouse-down-up ng-click='addProduct(product)'></ion-icon>
+                <span class='product-quantity'>{{p.quantity}}</span>
+             <i class='icon ion-minus-round icon-minus-round' mouse-down-up ng-click='removeProduct(product)'></i> -->
+                <button ion-button small color="danger" (click)="quantityHandler('minus', p.id, i)" [ngClass]="{'section-active': p.open, 'section': !p.open}"><ion-icon name="remove"></ion-icon></button>
+                <span  class="qty" *ngIf="!p.open" value="p.quantity">{{p.quantity}}</span>
+                <ion-spinner name="dots" *ngIf="p.open"></ion-spinner>
+                <button ion-button small color="danger" (click)="quantityHandler('plus',p.id, i)" [ngClass]="{'section-active': p.open, 'section': !p.open}"><ion-icon name="add"></ion-icon></button>
+                <button ion-button small color="danger" ><ion-icon name="paper"></ion-icon></button>
+                <button ion-button small color="danger" (click)="deleteFromCart(p.id, i)"><ion-icon name="trash"></ion-icon></button>
             </ion-col>
           </ion-row>
         </ion-col>
-        <ion-col>
-            $43.00 
+        <ion-col style="font-size: 8pt;">
+            ${{p.sale_price}} 
         </ion-col>
       </ion-row>
     </ion-grid>

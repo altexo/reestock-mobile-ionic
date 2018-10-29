@@ -1,0 +1,48 @@
+<!--
+  Generated template for the CategoriesPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Categorias</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list class="accordion-list">
+      <!-- First Level -->
+      <ion-list-header *ngFor="let item of categories; let i = index" no-lines no-padding>
+        <!-- Toggle Button -->
+        <button ion-item (click)="toggleSection(i)" detail-none [ngClass]="{'section-active': item.open, 'section': !item.open}">
+          <ion-icon item-left name="arrow-forward" *ngIf="!item.open"></ion-icon>
+          <ion-icon item-left name="arrow-down" *ngIf="item.open"></ion-icon>
+            {{ item.name }}
+        </button>
+   
+        <ion-list *ngIf="item.sub_categories && item.open" no-lines>
+          <!-- Second Level -->
+          <ion-list-header *ngFor="let child of item.sub_categories; let j = index" no-padding>
+            <!-- Toggle Button -->
+            <button ion-item (click)="toggleItem(i, j)" *ngIf="child.sub_categories" class="child" detail-none>
+              <ion-icon item-left name="add" *ngIf="!child.open"></ion-icon>
+              <ion-icon item-left name="close" *ngIf="child.open"></ion-icon>
+              {{ child.name }}
+            </button>
+   
+            <!-- Direct Add Button as Fallback -->
+            <button *ngIf="!child.sub_categories" ion-item detail-none class="child-item" text-wrap (click)="productsBySubCategory(child.id)">
+              {{child.name}}
+            </button>   
+          </ion-list-header>
+        </ion-list>
+        
+      </ion-list-header>
+    </ion-list>
+</ion-content>
+

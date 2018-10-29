@@ -1,5 +1,8 @@
+import { CategoriesPage } from './../categories/categories';
+import { AuthServiceProvider } from './../../providers/auth-service/auth-service';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+
 //import {ProductsPage} from '../pages/products/products';
 /**
  * Generated class for the StorePage page.
@@ -18,15 +21,27 @@ import { ProductsPage } from "../../pages/products/products";
 
 export class StorePage {
   public hideMe = false;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  public deparments: any;
+  constructor(public navCtrl: NavController, public navParams: NavParams, public apiCall: AuthServiceProvider) {
    
   }
  
   ionViewDidLoad() {
     console.log('ionViewDidLoad StorePage');
+    const token = JSON.parse(localStorage.getItem("session"));
+
+   // console.log(token);
+    // this.apiCall.getData('store/departments', token).then((result) =>{
+    //   console.log(result['Departments']);
+    //   this.deparments = result['Departments'];
+    // });
+  
   }
-  goToProductsPage(){
-    this.navCtrl.push(ProductsPage);
+  goToProductsPage(id){
+    let departmentId = {id: id};
+    this.navCtrl.push(CategoriesPage, departmentId);
+    console.log("Dep ID: "+id);
+    
   }
 
   hide() {

@@ -32,6 +32,10 @@ page-product-modal {
         background-color: #F44336;
         color: white;
     }
+    .btn-color-green{
+        background-color: #b7b7b7;
+        color: white;
+    }
     .btn-related{
         background-color: #F44336;
         color: white;
@@ -73,4 +77,38 @@ page-product-modal {
             padding: 0px !important;
         }    
     }
+    .qty-icon{
+        font-size: 17pt;
+        color: black;
+        //width: 100%;
+    }
+    .qty-container{
+        width: 100%;
+        justify-content: center;
+        display: flex!important;
+        align-items: center!important;
+    }
+    .qty-label{
+        margin-right: 10px;
+        margin-left: 10px;
+        justify-content: center;
+        color:black;
+        font-size: 14pt;
+        display: inline-block;
+    vertical-align: middle;
+    margin-top: 3%;
+    }
+    .inCart{
+        
+    }
+    .allready{
+        color: #189818;
+    }
+    .allreadyInCart{
+        background-color: #f4f4f4;
+        
+    }
+    // .none{
+    //     color: black;
+    // }
 }
