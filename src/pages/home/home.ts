@@ -13,7 +13,7 @@ import { ModalController, NavParams, App } from 'ionic-angular';
 export class HomePage {
   public sessionDetails: any;
   destacado: string = "abarrotes";
-  pageTitle: any = "Inicio";
+  pageTitle = "Inicio";
   
   constructor(public navCtrl: NavController, private modalCtrl: ModalController, public app: App) {
     const data = JSON.parse(localStorage.getItem('session'));

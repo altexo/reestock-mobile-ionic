@@ -8,6 +8,11 @@
 
   <ion-navbar>
     <ion-title></ion-title>
+    <ion-buttons class="nav-button" padding end >
+      <button >
+          <ion-icon class=" header-icons" name="cart" (click)="openCart()" ></ion-icon>
+      </button>
+  </ion-buttons>
     <ion-buttons end>
       <button class="close-button" padding (click)="closeProductModal()">
         <ion-icon class="close-icon" name="close"></ion-icon>
@@ -53,7 +58,7 @@
                       <button start color="light"  style="width: 30%" ion-button block  ><ion-icon  name="remove" class="qty-icon"  (click)="quantityHandler('minus',cartDetails.cart_id)"></ion-icon></button>
                    
                       <span class="qty-label" *ngIf="!showLoading">{{cartDetails.quantity}}</span> 
-                      <ion-spinner name="circles" *ngIf="showLoading" style="margin-top: 2%"></ion-spinner>
+                      <ion-spinner  *ngIf="showLoading" style="margin-top: 2%"></ion-spinner>
                       <button end color="light"  style="width: 30%; color:black" ion-button block  ><ion-icon  name="add" class="qty-icon"  (click)="quantityHandler('plus',cartDetails.cart_id)"></ion-icon></button>
                    
                 </div>

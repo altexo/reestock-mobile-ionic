@@ -1,3 +1,6 @@
+import { DeliveryDetailsPage } from './../pages/delivery-details/delivery-details';
+import { SearchResultsPage } from './../pages/search-results/search-results';
+import { SearchBarPage } from './../pages/search-bar/search-bar';
 import { ProductModalPage } from './../pages/product-modal/product-modal';
 import { CategoriesPage } from './../pages/categories/categories';
 import { WelcomePage } from './../pages/welcome/welcome';
@@ -19,6 +22,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { ProductsPage } from "../pages/products/products";
 import { AuthServiceProvider } from '../providers/auth-service/auth-service';
 import { HttpModule } from '@angular/http';
+import {HTTP} from '@ionic-native/http';
 
 
 
@@ -38,7 +42,10 @@ import { HttpModule } from '@angular/http';
     ProductsPage,
     NavComponent,
     CategoriesPage,
-    ProductModalPage
+    ProductModalPage,
+    SearchBarPage,
+    SearchResultsPage,
+    DeliveryDetailsPage
   
   ],
   imports: [
@@ -57,7 +64,10 @@ import { HttpModule } from '@angular/http';
     StorePage,
     ProductsPage,
     CategoriesPage,
-    ProductModalPage
+    ProductModalPage,
+    SearchBarPage,
+    SearchResultsPage,
+    DeliveryDetailsPage
 
   ],
   providers: [
@@ -65,6 +75,7 @@ import { HttpModule } from '@angular/http';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthServiceProvider,
+    HTTP,
 
 
   ]

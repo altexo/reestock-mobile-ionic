@@ -33,6 +33,12 @@ export class ProductModalPage {
     
     modal.present();
   }
+  openCart(){
+    const modal = this.modalCtrl.create('CartPage');
+    
+    modal.present();
+    console.log('fondekdnslkn');
+  }
   ionViewDidLoad() {
     console.log('ionViewDidLoad ProductModalPage');
    

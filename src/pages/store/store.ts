@@ -20,6 +20,7 @@ import { ProductsPage } from "../../pages/products/products";
 })
 
 export class StorePage {
+  pageTitle: any = "Departamentos";
   public hideMe = false;
   public deparments: any;
   constructor(public navCtrl: NavController, public navParams: NavParams, public apiCall: AuthServiceProvider) {

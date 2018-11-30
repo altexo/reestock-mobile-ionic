@@ -1,0 +1,27 @@
+page-search-bar {
+    ion-spinner {
+        display: block;
+        margin: auto;
+        height: 60px;
+      }
+      ion-label {
+        text-transform: lowercase;
+        //line-height: 3;
+    }
+    ion-label::first-letter {
+        text-transform: uppercase;
+    }
+    .input-wrapper{
+        display: block;
+    }
+    .sub-item{
+        margin: 0;
+        font-size: 11pt;
+        color: grey;
+    }
+    .main-item{
+        margin-bottom: 0;
+        margin-top: 10px;
+    }
+
+}

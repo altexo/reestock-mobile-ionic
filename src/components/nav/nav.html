@@ -5,13 +5,13 @@
     </button>
     <ion-buttons class="nav-button" padding end >
         <button >
-            <ion-icon name="search"></ion-icon>
+            <ion-icon class="header-icons" name="search" (click)="OpensearchBar()"></ion-icon>
         </button>    
     </ion-buttons>
         <ion-buttons class="nav-button" padding end (click)="openCart()">
             <button >
-                <ion-icon name="cart"></ion-icon>
+                <ion-icon class=" header-icons" name="cart"></ion-icon>
             </button>
         </ion-buttons>
-    <ion-title>{{text}}</ion-title>
+    <ion-title style="color: white">{{text}}</ion-title>
   </ion-navbar>

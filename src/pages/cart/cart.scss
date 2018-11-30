@@ -70,4 +70,18 @@ page-cart {
         padding-right: 7px;
         padding-left: 7px;
       }
+      .total{
+          padding-top: 0px;
+      }
+      .subtotal{
+          padding-bottom: 0px;
+          font-size: 9pt;
+          color: #3e3e3e
+      }
+      .subtotal-price{
+          text-align: right;
+      }
+      .total-price{
+          text-align: right;
+      }
 }

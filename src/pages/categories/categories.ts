@@ -19,6 +19,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class CategoriesPage {
   departmentId: string;
   categories: any;
+  pageTitle = "Categorias";
   shownGroup = null;
   constructor(public navCtrl: NavController, public navParams: NavParams, public apiCall: AuthServiceProvider) {
   }

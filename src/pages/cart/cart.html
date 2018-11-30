@@ -36,15 +36,15 @@
             </ion-col>
             <ion-col col-12 style="display: inline-flex;   align-items: center;
             ">
-                <!-- <ion-icon name="add" class='icon ion-plus-round icon-plus-round' mouse-down-up ng-click='addProduct(product)'></ion-icon>
-                <span class='product-quantity'>{{p.quantity}}</span>
-             <i class='icon ion-minus-round icon-minus-round' mouse-down-up ng-click='removeProduct(product)'></i> -->
                 <button ion-button small color="danger" (click)="quantityHandler('minus', p.id, i)" [ngClass]="{'section-active': p.open, 'section': !p.open}"><ion-icon name="remove"></ion-icon></button>
                 <span  class="qty" *ngIf="!p.open" value="p.quantity">{{p.quantity}}</span>
                 <ion-spinner name="dots" *ngIf="p.open"></ion-spinner>
                 <button ion-button small color="danger" (click)="quantityHandler('plus',p.id, i)" [ngClass]="{'section-active': p.open, 'section': !p.open}"><ion-icon name="add"></ion-icon></button>
-                <button ion-button small color="danger" ><ion-icon name="paper"></ion-icon></button>
+                <button ion-button small color="danger" (click)="presentPrompt(p.id, i, p.instructions)"><ion-icon name="paper"></ion-icon></button>
                 <button ion-button small color="danger" (click)="deleteFromCart(p.id, i)"><ion-icon name="trash"></ion-icon></button>
+            </ion-col>
+            <ion-col col-12 style="display: -webkit-box;" *ngIf="p.instructions != NULL">
+              <ion-label for="" style="font-weight: bold; color: red; width: 85px; font-size: 8pt">Instrucciones: </ion-label><ion-label style="width: 75%; font-size: 8pt">{{p.instructions}}</ion-label>
             </ion-col>
           </ion-row>
         </ion-col>
@@ -54,9 +54,27 @@
       </ion-row>
     </ion-grid>
   </div>
-  <ion-footer no-shadow>
-      <ion-toolbar position="bottom">
-        <button ion-button full color="light" class="continue-button">Continuar</button>
-      </ion-toolbar>
-    </ion-footer>
+
 </ion-content>
+<ion-footer no-shadow>
+
+    <ion-row col-12 class="subtotal">
+      <ion-col class="subtotal-labels">
+        <ion-label>Subtotal</ion-label>
+        <ion-label>Envio</ion-label>
+      </ion-col>
+      <ion-col>
+        <ion-label class="subtotal-price">{{subtotal}} MXN</ion-label>
+        <ion-label class="subtotal-price">+60.00 MXN</ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row col-12 class="total">
+      <ion-col>Total</ion-col>
+      <ion-col><ion-label class="total-price">{{total}} MXN</ion-label></ion-col>
+      
+    </ion-row>
+
+  <ion-toolbar position="bottom">
+    <button ion-button full color="light" class="continue-button" (click)="checkout()" >Continuar</button>
+  </ion-toolbar>
+</ion-footer>

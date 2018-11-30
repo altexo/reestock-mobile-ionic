@@ -1,0 +1,44 @@
+page-search-results {
+    .nav-button button{
+        background-color: transparent;
+    }
+    .header-icons {
+        font-size: 15pt; //Preferred size here
+        color: #fff;
+    }
+    .nav-button{
+        padding: 10px;
+    }
+    ion-card
+    { 
+        width:100% !important; 
+        margin-left: 0 !important; 
+        margin-right: 0 !important; 
+        img
+        { 
+            width:100%; 
+        } 
+    
+    }
+    ion-col{
+        padding: 0;
+    }
+    .poduct-card{
+        text-align: center;
+        
+    }
+    .product-name {
+        font-size: 7pt !important;
+        display: inline-block;
+        text-transform: capitalize;
+        //text-overflow: ellipsis;
+        //overflow: hidden;
+       
+    }
+    .product-price{
+        font-size: 10pt !important;
+        color: red;
+        font-weight: bold;
+    
+    }
+}

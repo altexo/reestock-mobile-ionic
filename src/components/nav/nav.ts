@@ -1,3 +1,4 @@
+import { SearchBarPage } from './../../pages/search-bar/search-bar';
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ModalController, NavParams } from 'ionic-angular';
@@ -13,16 +14,17 @@ import { ModalController, NavParams } from 'ionic-angular';
   templateUrl: 'nav.html'
 })
 export class NavComponent {
-@Input("navTitle") titleText;
+@Input() navTitle: string;
   text: string;
+ 
 
   constructor(public navCtrl: NavController, private modalCtrl: ModalController) {
     console.log('Hello NavComponent Component');
-    this.text = 'Inicio';
+    this.text = this.navTitle;
   }
   
   ngAfterViewinit(){
-    this.text = this.titleText;
+    this.text = this.navTitle;
   }
 
   openCart(){
@@ -30,6 +32,9 @@ export class NavComponent {
     
     modal.present();
     console.log('fondekdnslkn');
+  }
+  OpensearchBar(){
+    this.navCtrl.push(SearchBarPage);
   }
 
 }

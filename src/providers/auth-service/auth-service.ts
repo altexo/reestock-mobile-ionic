@@ -6,7 +6,6 @@ import 'rxjs/add/operator/map';
 let apiUrl = "http://127.0.0.1:8000/api/";
 /*
   Generated class for the AuthServiceProvider provider.
-
   See https://angular.io/guide/dependency-injection for more info on providers
   and Angular DI.
 */
